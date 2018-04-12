@@ -4,7 +4,7 @@
  }
 
 
- h1{
+ .h1{
  	border-left: 8px solid #DEB887;
     background-color: #FAEBD7;
 
@@ -14,10 +14,15 @@
  	 border-left: 8px solid #DEB887;
     background-color: #FFF8DC;
  }
- li{
+ .li{
  	margin: 10px;
  }
 
-body{
+.body{
    background-image: url(fondo.jpg); 
+}
+
+.muestras{
+    background-color: #FFF8DC; 
+    border-left: 6px solid #DEB887;
 }
