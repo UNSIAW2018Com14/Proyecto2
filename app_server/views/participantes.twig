@@ -1,0 +1,42 @@
+{% extends 'layout.twig' %}
+{% block body %}
+{% include "menuEstilo1.twig" %}
+<link href="stylesheets/participantes.css" rel="stylesheet">
+<script  type="text/javascript" src="javascripts/muestraParticipantes.js" async></script>
+        <div class="informacionParticipantes">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">     
+                    <div class="equipos">
+                        <h2><div class="titulos">Listado de equipos</div> </h2>
+                          <ul class="list-group " id ="muestraEquipos">
+                            {% for equipo in equipos %}    
+                            <li class="list-group-item muestras" id="{{equipo.nombre}}"> {{equipo.nombre}} </li>  
+                            {% endfor %} 
+                        </ul>               
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="equipoLogo" id ="equipoLogo"> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6" id="tituloIntegrantes">     
+                    <div class="integrantes">
+                       <ul class="list-group" id ="muestraIntegrantes">             
+                       </ul>               
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="integranteFoto" id="integranteFoto">  
+                    </div>
+                </div>
+                </div>
+            <div class="row">
+                <div class ="infoIntegrante" id="infoIntegrante">
+                </div>
+            </div>
+        </div>  
+    </div>  
+{% endblock %}

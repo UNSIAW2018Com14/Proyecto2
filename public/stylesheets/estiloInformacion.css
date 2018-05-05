@@ -1,0 +1,28 @@
+ .informacion{
+ 	padding-top: 70px;
+ 	padding-left: 40px;
+ }
+
+
+ .h1{
+ 	border-left: 8px solid #DEB887;
+    background-color: #FAEBD7;
+
+ }
+
+ .noticias{
+ 	 border-left: 8px solid #DEB887;
+    background-color: #FFF8DC;
+ }
+ .li{
+ 	margin: 10px;
+ }
+
+.body{
+   background-image: url(fondo.jpg); 
+}
+
+.muestras{
+    background-color: #FFF8DC; 
+    border-left: 6px solid #DEB887;
+}

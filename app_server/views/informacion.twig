@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+<link href="/stylesheets/estiloInformacion.css" rel="stylesheet">
+<script  type="text/javascript" src="javascripts/informacion.js" async></script>
+      {% include "menuEstilo1.twig" %}
+        <div class="informacion">
+        <h1>Información</h1>
+        <br>
+        <div class= noticias>
+           <hr>
+         <li>Para ver las reglas del juego haga click en el seguiente link:
+          <a class="btn btn-primary" href="https://playhearthstone.com/es-es/game-guide/" role= "button">Reglas</a>
+          <hr>
+         </li>
+         <li>Los resultados de la última fecha ya están disponibles</li>  
+         <hr>
+         </div>
+         <br>
+         <h1> Enfrentamientos pasados </h1>
+         <br>
+        <ul id ="enfrentamientos"> 
+        </ul>
+        </div>         
+{% endblock %}

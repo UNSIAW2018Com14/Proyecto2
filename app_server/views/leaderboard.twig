@@ -1,0 +1,32 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<link href="/stylesheets/leaderboard.css" rel="stylesheet">
+<script  type="text/javascript" src="javascripts/muestraLeaderboard.js" async></script>
+{% include "menuEstilo1.twig" %}     
+        <h1>Leaderboard</h1>
+        <hr>
+        <div class="container">
+                <div class="col-sm-6">
+                    <div class="leaderboardEquipo">
+                        <h2> Ranking de Equipos </h2>
+                        <br>
+                            <ol id="rankingEquipos">   
+                            </ol> 
+                            <br>
+                                <br>
+                                <br>
+                                </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="leaderboardJugador">
+                        <h2> Ranking de Jugadores </h2>
+                        <br>
+                    <ol id="rankingIntegrantes">    
+                    </ol>
+                    <br>
+                    <br>
+                    <br>    
+                </div>
+                </div>
+        </div>
+{% endblock %}

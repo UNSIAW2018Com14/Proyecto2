@@ -1,0 +1,39 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<form method ="POST" action="/equiposForm/add">
+	<div class="col-sm-6">
+		<div class="form-group">
+        	<label for="NombreEquipo">Nombre del Equipo</label>
+   			 <input autofocus required type="text" class="form-control" id="NombreEquipo" name="NombreEquipo" placeholder="Ingresar Nombre del Equipo">
+   			 <small class="form-text text-muted">Obligatorio</small>
+   		</div>
+   		<div class="form-group">
+        	<label for="Institucion">Institución que representa </label>
+   			 <input required type="text" class="form-control" id="Institucion" name="Institucion" placeholder="Ingresar Institución">
+   			 <small class="form-text text-muted">Obligatorio</small>
+   		</div>
+   		<div class="form-group">
+        	<label for="Icono">Icono</label>
+   			 <input required type="text" class="form-control" id="IconoEquipo" name="IconoEquipo" placeholder="Ingresar Icono del Equipo">
+   			 <small class="form-text text-muted">Obligatorio</small>
+   		</div>	
+			<div class="form-group">
+			<label for="NickIntegrante1">NickName 1</label>
+   		<input required type="text" class="form-control" id="NickName1" name="NickName1" placeholder="Ingresar NickName del integrante 1">
+   		<small class="form-text text-muted">Obligatorio</small>
+			 </div>
+			 <div class="form-group">
+			<label for="NickIntegrante2">NickName 2</label>
+   		<input required type="text" class="form-control" id="NickName2" name="NickName2" placeholder="Ingresar NickName del integrante 2">
+   		<small class="form-text text-muted">Obligatorio</small>
+			 </div>
+			 <div class="form-group">
+			<label for="NickIntegrante3">NickName 3</label>
+   		<input required type="text" class="form-control" id="NickName3" name="NickName3" placeholder="Ingresar NickName del integrante 3">
+   		<small class="form-text text-muted">Obligatorio</small>
+			 </div>
+   	<button type="submit" class="btn btn-primary">Submit</button>	 
+		 </div>
+	</div>
+</form>
+{% endblock %}

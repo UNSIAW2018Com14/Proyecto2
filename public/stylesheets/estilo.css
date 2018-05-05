@@ -1,0 +1,67 @@
+
+.titulo {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    font-family: armWrestler;
+    padding-top: 54px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    float:left;
+}
+
+.lema {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.imagenPortada {
+    width: 100%;
+    height: 100%;
+}
+
+.textoFecha{
+    font-size: 20px;
+    float: center;
+    padding-top: 20%;
+    padding-left: 20%;
+}
+
+.video{
+    width: 100%;
+    height: 415px;
+ }
+
+ .descripcion{
+    font-size: 20px;
+    float: center;
+ }
+ 
+.descripcion{
+    padding-left: 20px;
+    float: left;
+}
+
+p{
+    padding-left: 15px;
+    float: left;
+    font-size: 20px;
+    float: left;
+    color: black;
+    border-left: 30px solid grey;
+    border-right: 30px solid grey;
+    background-color: white;
+}
+
+.logoTorneo{
+    width: 415px;
+    height: 415px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fondoColor{
+    background-color: #FFF8DC;
+}

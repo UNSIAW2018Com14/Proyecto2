@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+{% block body %}
+<link href="/stylesheets/fixture.css" rel="stylesheet">
+<script  type="text/javascript" src="javascripts/muestraFixture.js" async></script>
+{% include "menuEstilo1.twig" %}
+    <div class="informacionFixture">
+        <h2>Fixture</h2>
+        <table class="table table-striped" id="tabla">
+              <th id="fecha" class="tablaColor"><h3>Fecha</h3></th>
+              <th id ="equipo1" class="tablaColor"><h3>Equipo 1</h3></th>
+              <th id="equipo2" class="tablaColor"><h3>Equipo 2</h3></th>      
+        </table>
+    </div>
+{% endblock %}

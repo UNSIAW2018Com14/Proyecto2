@@ -1,0 +1,52 @@
+{% extends 'layout.twig' %}
+{% block body %}
+
+<form method ="POST" action="/integrantesForm/add">
+  <div class="form-group">
+    <label for="Nombre">Nombre</label>
+    <input autofocus required type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Ingresar Nombre">
+    <small class="form-text text-muted">Obligatorio</small>
+  </div>
+  <div class="form-group">
+    <label for="Apellido">Apellido</label>
+    <input required type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Ingresar Apellido">
+    <small class="form-text text-muted">Obligatorio</small>
+  </div>
+   <div class="form-group">
+    <label for="Nickname">Nickname</label>
+    <input required type="text" class="form-control" id="Nickname" name="Nickname" placeholder="Ingresar Nickname">
+    <small class="form-text text-muted">Obligatorio</small>
+  </div>
+   <div class="form-group">
+    <label for="DNI">DNI</label>
+    <input required type="text" class="form-control" id="DNI" name="DNI" placeholder="Ingresar DNI">
+    <small class="form-text text-muted">Obligatorio</small>
+  </div>
+   <div class="form-group">
+    <label for="Edad">Edad</label>
+    <input required type="text" class="form-control" id="Edad" name="Edad" placeholder="Ingresar Edad">
+    <small class="form-text text-muted">Obligatorio</small>
+  </div>
+   <div class="form-group">
+    <label for="Sexo">Sexo</label>
+    <input required type="text" class="form-control" id="Sexo" name= "Sexo" placeholder="Ingresar Sexo">
+    <small class="form-text text-muted">Obligatorio</small>
+  </div>
+     <div class="form-group">
+    <label for="Foto">Foto</label>
+    <input type="text" class="form-control" id="Foto" name="Foto" placeholder="Ingresar Foto">
+    <small class="form-text text-muted">No Obligatorio</small>
+  </div>
+   <div class="form-group">
+    <label for="Carta Favorita">Carta Favorita</label>
+    <input type="text" class="form-control" id="CartaFavorita" name="CartaFavorita" placeholder="Ingresar Carta Favorita">
+    <small class="form-text text-muted">No Obligatorio</small>
+  </div>
+   <div class="form-group">
+    <label for="Clase Favorita">Clase Favorita</label>
+    <input type="text" class="form-control" id="ClaseFavorita" name="ClaseFavorita" placeholder="Ingresar Clase Favorita">
+    <small class="form-text text-muted">No Obligatorio</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
