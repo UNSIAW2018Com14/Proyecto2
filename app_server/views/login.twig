@@ -1,10 +1,8 @@
 {% extends 'layout.twig' %}
 {% block body %}
 <script src="javascripts/loginFB.js"></script>
-<div id = "status">
-<button onclick="getInfo()">Get Info</button>
+<button onclick="getInfo()" id = "status" >Get Info</button>
 <button onclick="loginFB()" id="login">Login</button>
-</div>
 <div class="container">
     <div class="auth">
 		<form action="login" method="post">
