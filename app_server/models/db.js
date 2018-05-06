@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-const dbURI = 'mongodb://localhost/WebHearthstone';
+//const dbURI = 'mongodb://localhost/WebHearthstone';
+const dbURI = process.env.MLAB_URI;
+
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', () => {
