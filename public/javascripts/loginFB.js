@@ -41,7 +41,6 @@
 		// getting basic user info
 		function getInfo() {
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
-				document.getElementById('status').innerHTML = response.id;
-				console.log(status);
+				document.getElementById('status').innerHTML = response.first_name + last_name;
 			});
 		}
