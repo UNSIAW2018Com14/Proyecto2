@@ -7,8 +7,8 @@
 		    });
 		    FB.getLoginStatus(function(response) {
 		    	if (response.status === 'connected') {
-		    		//document.getElementById('status').innerHTML = 'We are connected.';
-		    		//document.getElementById('login').style.visibility = 'hidden';
+		    		document.getElementById('status').innerHTML = 'We are connected.';
+		    		document.getElementById('login').style.visibility = 'hidden';
 		    	} else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
 		    	} else {
@@ -42,5 +42,6 @@
 		function getInfo() {
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
 				document.getElementById('status').innerHTML = response.id;
+				console.log(status);
 			});
 		}
