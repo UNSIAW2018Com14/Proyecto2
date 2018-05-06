@@ -1,9 +1,23 @@
 {% extends 'layout.twig' %}
 {% block body %}
 <script src="javascripts/loginFB.js"></script>
-<div id="status">
-	<button onclick="getInfo()">Get Info</button>
-	<button onclick="login()" id="login">Login</button>
+<div class="container">
+    <div class="auth">
+		<form action="login" method="post">
+		    <div>
+		        <input type="text" name="username" placeholder="Usuario" autofocus/>
+		    </div>
+		    <div>
+		        <input type="password" name="password" placeholder="Contraseña"/>
+		    </div>
+		    <div>
+		        <input type="submit" value="Ingresar"/>
+		    </div>
+		</form>
+		<button onclick="getInfo()">Get Info</button>
+		<button onclick="login()" id="login">Login</button>
+	</div>
+    <div class="message">
+    </div>
 </div>
 {% endblock %}
-
