@@ -48,7 +48,7 @@ app.use('/participantes', participantesRouter);
 app.use('/leaderboard', leaderboardRouter);
 app.use('/anuncios', anunciosRouter);
 app.use('/fixture', fixtureRouter);
-app.use('/integrantesForm', equiposFormRouter);
+app.use('/equiposForm', equiposFormRouter);
 app.use('/integrantesForm', integrantesFormRouter);
 app.use('/api', apiRouter);
 app.use('/', authRouter);
