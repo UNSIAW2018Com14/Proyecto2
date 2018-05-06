@@ -44,3 +44,4 @@ require('./equipo');
 require('./bo5s');
 require('./enfrentamientos');
 require('./instancias');
+require('./users');

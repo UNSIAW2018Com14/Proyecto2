@@ -5,7 +5,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
-const expressValidator = require('express-validator');
+const passport = require('passport');
+require('./app_server/models/db');
 
 const indexRouter = require('./app_server/routes/index');
 const usersRouter = require('./app_server/routes/users');
@@ -18,6 +19,7 @@ const equiposFormRouter = require('./app_server/routes/integrantesForm');
 const integrantesFormRouter = require('./app_server/routes/equiposForm');
 const apiRouter = require('./app_server/routes/api');
 const loginRouter = require('./app_server/routes/login');
+const authRouter = require('./app_server/routes/auth');
 
 const app = express();
 
@@ -31,6 +33,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(require('express-session')({
+  secret: 'nodejs-twig-secret',
+  resave: true,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/informacion', informacionRouter);
@@ -42,9 +53,7 @@ app.use('/integrantesForm', equiposFormRouter);
 app.use('/integrantesForm', integrantesFormRouter);
 app.use('/api', apiRouter);
 app.use('/login', loginRouter);
-
-// express validator middleware
-app.use(expressValidator()); 
+app.use('/', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
