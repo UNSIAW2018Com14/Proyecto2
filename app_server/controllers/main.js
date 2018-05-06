@@ -47,9 +47,6 @@ const integrantesForm = function (req, res) {
   res.render('integrantesForm');
 };
 
-const login = function (req, res) { 
-  res.render('login');
-};
 
 module.exports = {
   index,
@@ -60,5 +57,4 @@ module.exports = {
   fixture,
   equiposForm,
   integrantesForm,
-  login
 }

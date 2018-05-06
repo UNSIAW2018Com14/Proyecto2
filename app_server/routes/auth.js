@@ -3,9 +3,9 @@ const express = require('express');
 const router = express.Router();
 const passportFacebook = require('../controllers/auth');
 
-router.get('/login/facebook', passportFacebook.authenticate('facebook'));
+router.get('/loginfb', passportFacebook.authenticate('facebook'));
 router.get('/auth/facebook/callback',
-passportFacebook.authenticate('facebook', { failureRedirect: '/login' }),
+passportFacebook.authenticate('facebook', { failureRedirect: '/loginfb' }),
   function(req, res) {
     // Successful authentication, redirect home.
     res.redirect('/');
