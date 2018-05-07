@@ -7,7 +7,8 @@ var User = require('../models/users');
 passport.use(new Strategy({
     clientID: '168126427354074',
     clientSecret: '53335c45156e66fa96d9e650edf7d6c7', 
-    callbackURL: "https://hstournament.herokuapp.com/auth/facebook/callback"
+ //   callbackURL: "https://hstournament.herokuapp.com/auth/facebook/callback"
+    callbackURL: "https://56db1ef1.ngrok.io/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     //check user table for anyone with a facebook ID of profile.id

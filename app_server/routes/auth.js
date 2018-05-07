@@ -11,4 +11,9 @@ passportFacebook.authenticate('facebook', { failureRedirect: '/loginfb' }),
     res.redirect('/');
   });
 
+  router.get('/logout/facebook', function(req, res) {
+    req.logout();
+    res.redirect('/');
+  });
+
 module.exports = router;
