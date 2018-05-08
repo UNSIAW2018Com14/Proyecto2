@@ -23,17 +23,17 @@ function recuperarIntegrantesFavoritosDesdeLocalStorage(){
 }
 
 function guardarIntegrantesFavoritosEnBD(equipos){
-    const equiposString = JSON.stringify(equipos);
+    const integrantesString = JSON.stringify(equipos);
    $.ajax({
         url: './api/integrantesFavoritos',
         type: 'POST',
-        data: JSON.stringify({equiposFavoritos: JSON.parse(equiposString)}),
+        data: JSON.stringify({integrantesFavoritos: JSON.parse(integrantesString)}),
         contentType: "application/json",
         dataType: "json",
         success: function(data){ 
         },
         error: function(data) {
-            window.localStorage.setItem("integrantesFavoritos", equiposFavoritos);
+            window.localStorage.setItem("integrantesFavoritos", integrantesString);
         }
     });
 }
@@ -62,7 +62,7 @@ function guardarEquiposFavoritosEnBD(equipos){
         success: function(data){ 
         },
         error: function(data) {
-            window.localStorage.setItem("equiposFavoritos", equiposFavoritos);
+            window.localStorage.setItem("equiposFavoritos", equiposString);
         }
     });
 }
