@@ -149,7 +149,7 @@ $(function(){
     
         for(var i = 0; i < integrantesMarcados.length; i++){
             if ($(integrantesMarcados[i]).hasClass("equipoCSS"))
-            seleccionados.push(integrantesMarcados[i].id);            
+            integrantesSeleccionados.push(integrantesMarcados[i].id);            
         }
 
         guardarIntegrantesFavoritosEnLocalStorage(integrantesSeleccionados);
