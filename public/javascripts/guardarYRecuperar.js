@@ -22,18 +22,18 @@ function recuperarIntegrantesFavoritosDesdeLocalStorage(){
         return [];
 }
 
-function guardarIntegrantesFavoritosEnBD(integrantes){
-    const integrantesString = JSON.stringify(integrantes);
+function guardarIntegrantesFavoritosEnBD(equipos){
+    const equiposString = JSON.stringify(equipos);
    $.ajax({
         url: './api/integrantesFavoritos',
         type: 'POST',
-        data: JSON.stringify({intFavs: JSON.parse(integrantesString)}),
+        data: JSON.stringify({equiposFavoritos: JSON.parse(equiposString)}),
         contentType: "application/json",
         dataType: "json",
         success: function(data){ 
         },
         error: function(data) {
-            window.localStorage.setItem("integrantesFavoritos", intFavs);
+            window.localStorage.setItem("integrantesFavoritos", equiposFavoritos);
         }
     });
 }
