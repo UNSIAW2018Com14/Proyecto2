@@ -18,6 +18,8 @@ router.post('/estilo', middleware, ctrlEstilo.saveEstilo);
 router.get('/estilo', middleware, ctrlEstilo.getEstilo);
 router.post('/equiposFavoritos', middleware, equipoApi.saveEquiposFavoritos);
 router.get('/equiposFavoritos', middleware, equipoApi.getEquiposFavoritos);
+router.post('/integrantesFavoritos', middleware, integranteApi.saveIntegrantesFavoritos);
+router.get('/integrantesFavoritos', middleware, integranteApi.getIntegrantesFavoritos);
 
 
 module.exports = router;

@@ -15,8 +15,20 @@ function mostrarIntegrantes (integrantes,bo5s){
         var jugadorPuntaje = arrPuntajes[i];
         var nick = jugadorPuntaje[0];
         var puntaje = jugadorPuntaje[1];
-        $("#rankingIntegrantes").append($("<li></li>").text(nick + " : " + puntaje).append("<hr></hr>"));
+        favs = $("#rankingIntegrantes").append($("<li></li>").text(nick + " : " + puntaje).attr("id",nick).append("<hr></hr>").click(clickEquipo));
     }
+
+    recuperarIntegrantesFavoritosDesdeBD(function(integrantesRecuperados){
+        if(integrantesRecuperados == undefined){
+            integrantesRecuperados = recuperarIntegrantesFavoritosDesdeLocalStorage();
+        }
+        for(var i = 0; i < integrantesRecuperados.length; i++){
+            document.getElementById(integrantesRecuperados[i]).classList.add('equipoCSS');
+            if (integrantesRecuperados[i] == favs.attr("id")){   
+                favs.addClass("EquipoCSS");
+            }
+        } 
+    });
 }
 
 function obtenerPuntajes (bo5s, integrantes){
@@ -61,9 +73,9 @@ function mostrarEquipos (integrantes, bo5s, equipos){
         if(equiposRecuperados == undefined){
             equiposRecuperados = recuperarEquiposFavoritosDesdeLocalStorage();
         }
-        for(var index = 0; index < equiposRecuperados.length; index++){
-            document.getElementById(equiposRecuperados[index]).classList.add('equipoCSS');
-            if (equiposRecuperados[index] == favs.attr("id")){   
+        for(var i = 0; i < equiposRecuperados.length; i++){
+            document.getElementById(equiposRecuperados[i]).classList.add('equipoCSS');
+            if (equiposRecuperados[i] == favs.attr("id")){   
                 favs.addClass("EquipoCSS");
             }
         } 
@@ -114,11 +126,9 @@ function clickEquipo (e) {
     }
 
  $(function(){ 
-    $("body").on("click",".pruebaBoton",function(e) {
+    $("body").on("click","#btnEquiposFavoritos",function(e) {
         
-        var marcados = $("#rankingEquipos").children();
-        
-        localStorage.clear();
+        var marcados = $("#rankingEquipos").children();  
         seleccionados = [];
     
         for(var i = 0; i < marcados.length; i++){
@@ -131,7 +141,21 @@ function clickEquipo (e) {
     });
 });
 
+$(function(){ 
+    $("body").on("click","#btnIntegrantesFavoritos",function(e) {
+        
+        var marcados = $("#rankingIntegrantes").children();
+        seleccionados = [];
+    
+        for(var i = 0; i < marcados.length; i++){
+            if ($(marcados[i]).hasClass("equipoCSS"))
+            seleccionados.push(marcados[i].id);            
+        }
 
+        guardarIntegrantesFavoritosEnLocalStorage(seleccionados);
+        guardarIntegrantesFavoritosEnBD(seleccionados);
+    });
+});
 
 
 $(document).ready(mostrarRankings());

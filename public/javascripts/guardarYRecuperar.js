@@ -1,13 +1,54 @@
-function guardarEquiposFavoritosEnLocalStorage(favoritos){
-    localStorage.setItem("favoritos", favoritos);        
+function guardarEquiposFavoritosEnLocalStorage(equiposFavoritos){
+    localStorage.setItem("equiposFavoritos", JSON.stringify(equiposFavoritos));        
 }
 
 function recuperarEquiposFavoritosDesdeLocalStorage(){
-    var result = window.localStorage.getItem("favoritos");
+    var result = JSON.parse(window.localStorage.getItem("equiposFavoritos"));
     if(result != null)
         return result;
     else
         return [];
+}
+
+function guardarIntegrantesFavoritosEnLocalStorage(integrantesFavoritos){
+    localStorage.setItem("integrantesFavoritos", JSON.stringify(integrantesFavoritos));        
+}
+
+function recuperarIntegrantesFavoritosDesdeLocalStorage(){
+    var result = JSON.parse(window.localStorage.getItem("integrantesFavoritos"));
+    if(result != null)
+        return result;
+    else
+        return [];
+}
+
+function guardarIntegrantesFavoritosEnBD(integrantes){
+    const integrantesString = JSON.stringify(integrantes);
+   $.ajax({
+        url: './api/integrantesFavoritos',
+        type: 'POST',
+        data: JSON.stringify({integrantesFavoritos: JSON.parse(integrantesString)}),
+        contentType: "application/json",
+        dataType: "json",
+        success: function(data){ 
+        },
+        error: function(data) {
+            window.localStorage.setItem("integrantesFavoritos", integrantesFavoritos);
+        }
+    });
+}
+
+function recuperarIntegrantesFavoritosDesdeBD(callback) {
+	$.ajax({
+	    url: './api/integrantesFavoritos',
+	    type: 'GET',
+	    success: function(data){ 
+	        callback(data);
+	    },
+	    error: function(data) {
+		    return window.localStorage.getItem("integrantesFavoritos");
+	    }
+	});
 }
 
 function guardarEquiposFavoritosEnBD(equipos){
@@ -21,7 +62,7 @@ function guardarEquiposFavoritosEnBD(equipos){
         success: function(data){ 
         },
         error: function(data) {
-            window.localStorage.setItem("favoritos", equiposString);
+            window.localStorage.setItem("equiposFavoritos", equiposFavoritos);
         }
     });
 }
@@ -34,7 +75,7 @@ function recuperarEquiposFavoritosDesdeBD(callback) {
 	        callback(data);
 	    },
 	    error: function(data) {
-		    return window.localStorage.getItem("favoritos");
+		    return window.localStorage.getItem("equiposFavoritos");
 	    }
 	});
 }

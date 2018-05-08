@@ -40,4 +40,10 @@ body{
 .muestras{
     background-color: #FFF8DC; 
     border-left: 6px solid #DEB887;
+    cursor: pointer;
+}
+
+.muestrasSinClick{
+  background-color: #FFF8DC; 
+  border-left: 6px solid #DEB887;
 }

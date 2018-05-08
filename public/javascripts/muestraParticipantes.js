@@ -62,11 +62,11 @@ $.get("./api/equipos", function(equipos) {
 $('#muestraIntegrantes').one("click",function(){
   $("#infoIntegrante").append('<h2><div class="titulos"> Información personal del integrante</div> </h2>');
   $("#infoIntegrante").append('<ul class="list-group" id = "informacionIntegrante">');
-  $("#informacionIntegrante").append('<li class="list-group-item muestras" id="nombre"></li>');
-  $("#informacionIntegrante").append('<li class="list-group-item muestras" id="apellido" ></li>');
-  $("#informacionIntegrante").append('<li class="list-group-item muestras" id="edad" ></li>');
-  $("#informacionIntegrante").append('<li class="list-group-item muestras" id="favCard"> </li>');
-  $("#informacionIntegrante").append('<li class="list-group-item muestras" id = "favClass"></li>');
+  $("#informacionIntegrante").append('<li class="list-group-item muestrasSinClick" id="nombre"></li>');
+  $("#informacionIntegrante").append('<li class="list-group-item muestrasSinClick" id="apellido" ></li>');
+  $("#informacionIntegrante").append('<li class="list-group-item muestrasSinClick" id="edad" ></li>');
+  $("#informacionIntegrante").append('<li class="list-group-item muestrasSinClick" id="favCard"> </li>');
+  $("#informacionIntegrante").append('<li class="list-group-item muestrasSinClick" id = "favClass"></li>');
   $("#informacionIntegrante").append('</ul>'); 
 });
 
