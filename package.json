@@ -14,9 +14,11 @@
     "http-errors": "~1.6.2",
     "jshint": "^2.9.5",
     "mongoose": "^5.0.17",
+    "mongoose-findorcreate": "^3.0.0",
     "morgan": "~1.9.0",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
+    "passport-photo-facebook": "0.0.1-beta2",
     "twig": "~0.10.3"
   },
   "engines": {

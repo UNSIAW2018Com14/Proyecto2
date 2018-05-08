@@ -26,7 +26,7 @@
       {% if user %}
         <li class="nav-item">
           <div class="chip chip-lg">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg" alt="Contact Person"> Duende Carlos
+          <img id ="fbPic" src="{{user.picture}}" alt="Contact Person"> {{user.username}}
           </div>
       </li>
       <li class="nav-item" id="logout">

@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     estilo:{ 
-        type: Number,
+        type: String,
     },
     equiposFavoritos:{ 
         type: [String],

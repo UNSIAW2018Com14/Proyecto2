@@ -55,8 +55,19 @@ function mostrarEquipos (integrantes, bo5s, equipos){
         var equipoPuntaje = arrPuntajes[i];
         var nombre = equipoPuntaje[0];
         var puntaje = equipoPuntaje[1];
-        $("#rankingEquipos").append($("<li></li>").text(nombre + " : " + puntaje).append("<hr></hr>"));
+        var favs = $("#rankingEquipos").append($("<li></li>").text(nombre + " : " + puntaje).append("<hr></hr>").attr("id",nombre).click(clickEquipo));
     }
+    recuperarEquiposFavoritosDesdeBD(function(equiposRecuperados){
+        if(equiposRecuperados == undefined){
+            equiposRecuperados = recuperarEquiposFavoritosDesdeLocalStorage();
+        }
+        for(var index = 0; index < equiposRecuperados.length; index++){
+            document.getElementById(equiposRecuperados[index]).classList.add('equipoCSS');
+            if (equiposRecuperados[index] == favs.attr("id")){   
+                favs.addClass("EquipoCSS");
+            }
+        } 
+    });
 }
 
 function obtenerPuntajeEquipos(equipos, bo5s) {
@@ -98,5 +109,29 @@ function obtenerPuntajeJugador (jugador, bo5s) {
     return toReturn;
 }
 
- $(document).ready(mostrarRankings());
+function clickEquipo (e) {
+    $(e.target).toggleClass("equipoCSS");
+    }
 
+ $(function(){ 
+    $("body").on("click",".pruebaBoton",function(e) {
+        
+        var marcados = $("#rankingEquipos").children();
+        
+        localStorage.clear();
+        seleccionados = [];
+    
+        for(var i = 0; i < marcados.length; i++){
+            if ($(marcados[i]).hasClass("equipoCSS"))
+            seleccionados.push(marcados[i].id);            
+        }
+
+        guardarEquiposFavoritosEnLocalStorage(seleccionados);
+        guardarEquiposFavoritosEnBD(seleccionados);
+    });
+});
+
+
+
+
+$(document).ready(mostrarRankings());

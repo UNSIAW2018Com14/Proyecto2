@@ -7,7 +7,7 @@ const index = function (req, res) {
 };
 
 const informacion = function (req, res) { 
-  res.render('informacion');
+  res.render('informacion', {user: req.user});
 };
 
 const participantes = function (req, res) { 
@@ -21,30 +21,31 @@ const participantes = function (req, res) {
               } else {
             res.render('participantes', {
               title: 'Equipos', 
-              equipos: equipos 
+              equipos: equipos,
+              user: req.user
             });
           }
         })
       };
 
 const leaderboard = function (req, res) { 
-  res.render('leaderboard');
+  res.render('leaderboard', {user: req.user});
 };
 
 const anuncios = function (req, res) { 
-  res.render('anuncios');
+  res.render('anuncios', {user: req.user});
 };
 
 const fixture = function (req, res) { 
-  res.render('fixture');
+  res.render('fixture', {user: req.user});
 };
 
 const equiposForm = function (req, res) { 
-  res.render('equiposForm');
+  res.render('equiposForm', {user: req.user});
 };
 
 const integrantesForm = function (req, res) { 
-  res.render('integrantesForm');
+  res.render('integrantesForm', {user: req.user});
 };
 
 

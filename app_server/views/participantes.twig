@@ -10,8 +10,8 @@
                     <div class="equipos">
                         <h2><div class="titulos">Listado de equipos</div> </h2>
                           <ul class="list-group " id ="muestraEquipos">
-                            {% for equipo in equipos %}    
-                            <li class="list-group-item muestras" id="{{equipo.nombre}}"> {{equipo.nombre}} </li>  
+                            {% for equipo in equipos %}   
+                            <li class="list-group-item muestras" id="equipo{{equipo.nombre}}"> {{equipo.nombre}} </li>  
                             {% endfor %} 
                         </ul>               
                     </div>

@@ -1,6 +1,7 @@
 {% extends 'layout.twig' %}
 {% block body %}
 <link href="/stylesheets/leaderboard.css" rel="stylesheet">
+<script src="javascripts/guardarYRecuperar.js" async></script>
 <script  type="text/javascript" src="javascripts/muestraLeaderboard.js" async></script>
 {% include "menuEstilo1.twig" %}     
         <h1>Leaderboard</h1>
@@ -12,6 +13,7 @@
                         <br>
                             <ol id="rankingEquipos">   
                             </ol> 
+                <button type="button" class="btn btn pruebaBoton btn-success">Guardar favoritos</button>                            
                             <br>
                                 <br>
                                 <br>
@@ -25,7 +27,7 @@
                     </ol>
                     <br>
                     <br>
-                    <br>    
+                    <br>                        
                 </div>
                 </div>
         </div>

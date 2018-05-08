@@ -16,5 +16,8 @@ router.get('/enfrentamientos', enfrentamientoApi.getEnfrentamientos);
 router.get('/instancias', instanciaApi.getInstancias);
 router.post('/estilo', middleware, ctrlEstilo.saveEstilo);
 router.get('/estilo', middleware, ctrlEstilo.getEstilo);
+router.post('/equiposFavoritos', middleware, equipoApi.saveEquiposFavoritos);
+router.get('/equiposFavoritos', middleware, equipoApi.getEquiposFavoritos);
+
 
 module.exports = router;

@@ -14,7 +14,7 @@ function clickEquipo (e) {
 function mostrarIntegrantes(equipo) {
   $.get("./api/equipos", function(equipos) {
       $.each(equipos,function(key,Equipos){
-        if (Equipos.nombre === equipo){
+        if (("equipo"+Equipos.nombre) === equipo){
           icono = Equipos.icono;
           for (i=0; i< Equipos.integrantes.length; i++){
             var nickname = Equipos.integrantes[i];
@@ -41,7 +41,7 @@ function mostrarInformacion (equipoElegido, integranteElegido){
 $.get("./api/equipos", function(equipos) {
   $.get("./api/integrantes", function(integrantes) {
       $.each(equipos,function(key,Equipos){
-        if (Equipos.nombre === equipoElegido){
+        if (("equipo"+Equipos.nombre) === equipoElegido){
           $.each(integrantes,function(key,Integrantes){
             if (Integrantes.nickname === integranteElegido){
               $("#nombre").text("Nombre: " + Integrantes.nombre);
