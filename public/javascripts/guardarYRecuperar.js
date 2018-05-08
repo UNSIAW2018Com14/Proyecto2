@@ -22,8 +22,8 @@ function recuperarIntegrantesFavoritosDesdeLocalStorage(){
         return [];
 }
 
-function guardarIntegrantesFavoritosEnBD(equipos){
-    const integrantesString = JSON.stringify(equipos);
+function guardarIntegrantesFavoritosEnBD(integrantes){
+    const integrantesString = JSON.stringify(integrantes);
    $.ajax({
         url: './api/integrantesFavoritos',
         type: 'POST',

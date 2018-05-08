@@ -128,32 +128,32 @@ function clickEquipo (e) {
  $(function(){ 
     $("body").on("click","#btnEquiposFavoritos",function(e) {
         
-        var marcados = $("#rankingEquipos").children();  
-        seleccionados = [];
+        var equiposMarcados = $("#rankingEquipos").children();  
+        equiposSeleccionados = [];
     
-        for(var i = 0; i < marcados.length; i++){
-            if ($(marcados[i]).hasClass("equipoCSS"))
-            seleccionados.push(marcados[i].id);            
+        for(var i = 0; i < equiposMarcados.length; i++){
+            if ($(equiposMarcados[i]).hasClass("equipoCSS"))
+            equiposSeleccionados.push(equiposMarcados[i].id);            
         }
 
-        guardarEquiposFavoritosEnLocalStorage(seleccionados);
-        guardarEquiposFavoritosEnBD(seleccionados);
+        guardarEquiposFavoritosEnLocalStorage(equiposSeleccionados);
+        guardarEquiposFavoritosEnBD(equiposSeleccionados);
     });
 });
 
 $(function(){ 
     $("body").on("click","#btnIntegrantesFavoritos",function(e) {
         
-        var marcados = $("#rankingIntegrantes").children();
-        seleccionados = [];
+        var integrantesMarcados = $("#rankingIntegrantes").children();
+        integrantesSeleccionados = [];
     
-        for(var i = 0; i < marcados.length; i++){
-            if ($(marcados[i]).hasClass("equipoCSS"))
-            seleccionados.push(marcados[i].id);            
+        for(var i = 0; i < integrantesMarcados.length; i++){
+            if ($(integrantesMarcados[i]).hasClass("equipoCSS"))
+            seleccionados.push(integrantesMarcados[i].id);            
         }
 
-        guardarIntegrantesFavoritosEnLocalStorage(seleccionados);
-        guardarIntegrantesFavoritosEnBD(seleccionados);
+        guardarIntegrantesFavoritosEnLocalStorage(integrantesSeleccionados);
+        guardarIntegrantesFavoritosEnBD(integrantesSeleccionados);
     });
 });
 
