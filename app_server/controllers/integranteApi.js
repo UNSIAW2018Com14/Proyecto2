@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Integrante = mongoose.model('Integrante');
+const User = mongoose.model('users');
 
 const getIntegrantes = function (req, res) {
 	Integrante
