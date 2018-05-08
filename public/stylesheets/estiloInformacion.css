@@ -1,8 +1,13 @@
+
  .informacion{
  	padding-top: 70px;
  	padding-left: 40px;
  }
 
+.titulos {
+    border-left: 6px solid #DEB887;
+    background-color: #FAEBD7;
+  }
 
  .h1{
  	border-left: 8px solid #DEB887;
@@ -11,10 +16,10 @@
  }
 
  .noticias{
- 	 border-left: 8px solid #DEB887;
+ 	border-left: 8px solid #DEB887;
     background-color: #FFF8DC;
  }
- .li{
+ .li, .ul{
  	margin: 10px;
  }
 
@@ -26,3 +31,8 @@
     background-color: #FFF8DC; 
     border-left: 6px solid #DEB887;
 }
+
+.enfrentamientos{
+    border-left: 8px solid #DEB887;
+     }
+
