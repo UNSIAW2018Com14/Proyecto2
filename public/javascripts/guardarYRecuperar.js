@@ -27,13 +27,13 @@ function guardarIntegrantesFavoritosEnBD(integrantes){
    $.ajax({
         url: './api/integrantesFavoritos',
         type: 'POST',
-        data: JSON.stringify({integrantesFavoritos: JSON.parse(integrantesString)}),
+        data: JSON.stringify({intFavs: JSON.parse(integrantesString)}),
         contentType: "application/json",
         dataType: "json",
         success: function(data){ 
         },
         error: function(data) {
-            window.localStorage.setItem("integrantesFavoritos", integrantesFavoritos);
+            window.localStorage.setItem("integrantesFavoritos", intFavs);
         }
     });
 }
