@@ -62,6 +62,58 @@ p{
     margin-right: auto;
 }
 
+.btnEstilo{
+    padding-top: 15px;
+}
 .fondoColor{
     background-color: #FFF8DC;
+}
+
+.menu{
+    background-color: #FFF8DC;
+}
+
+a{  
+    background-color: #FFF8DC;
+    background-clip: content-box #DEB887, padding-box #DEB887;
+    background-color: #DEB887;
+}
+
+.navbar-default .navbar-nav>li>a {
+    background-color: #FFF8DC;
+    color: white;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #DEB887;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 0px 20px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    padding-top:22px;
+     vertical-align: center;
+    text-align: center;
+    color: grey;
+    background-color: #DEB887;
+    border-color: #FFF8DC;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    background-color: #FFF8DC;
+}
+button{
+    padding-top: 3px;
+    background-color: #2E579E;
+     background-clip: content-box #FFF8DC, padding-box #FFF8DC, padding black;
+
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #5d4c4cde;
+    background-color: #DEB887;
+    border-color: #DEB887;
 }
