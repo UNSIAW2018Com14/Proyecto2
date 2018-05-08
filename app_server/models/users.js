@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     equiposFavoritos:{ 
         type: [String],
     },
-    jugadoresFavoritos:{ 
+    integrantesFavoritos:{ 
         type: [String],    
     }
 });
