@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-const Integrante = mongoose.model('Integrante');
+const Equipo = mongoose.model('Equipo');
 const User = mongoose.model('users');
+const Integrante = mongoose.model('Integrante');
 
 const getIntegrantes = function (req, res) {
 	Integrante
@@ -15,8 +16,8 @@ const getIntegrantes = function (req, res) {
 					.status(200)
 					.json(integrantes);
 			}
-		})
-}
+		});
+};
 
 const getIntegrantesFavoritos = function (req, res) {
 	User

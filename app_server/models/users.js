@@ -20,6 +20,12 @@ const userSchema = new mongoose.Schema({
     },
     integrantesFavoritos:{ 
         type: [String],    
+    },
+    profilePicture:{
+        type: String,
+    },
+    editor: {
+        type: Boolean,
     }
 });
 

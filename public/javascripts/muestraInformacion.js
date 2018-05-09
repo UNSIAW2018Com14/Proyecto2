@@ -1,13 +1,23 @@
+var esEditor = $('#some-link').data('id');
+
 function mostrarEnfrentamientos (bo5s){
 	$.get("./api/bo5s", function(bo5s) {
 	     for (i = 0; i < bo5s.length; i++) {
 		   var bo5 = bo5s[i];
 		   var dia = obtenerFecha(bo5s[i].dia);
 		   if (!esFechaFutura(dia)){
-				$("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text("Enfrentamiento " + (i+1)));
+				$("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text("Enfrentamiento " + bo5.idBo5));
 				$("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text(" Dia: " + bo5.dia));
-				$("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text(bo5.nickIntegrante1 +" vs " + bo5.nickIntegrante2));
-				$("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text("Ganador: " + bo5.Resultado));
+                $("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text(bo5.nickIntegrante1 +" vs " + bo5.nickIntegrante2));
+                if (bo5.Resultado)
+                    $("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text("Ganador: " + bo5.Resultado));
+                if (bo5.comentarios.length != 0)
+                    $("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras").text("Comentarios: " + bo5.comentarios));
+                    /*
+                if (esEditor) {
+                    var comentario = $("#enfrentamientos").append($("<li></li>").addClass("list-group-item").addClass("muestras")); 
+                }
+                */
 				$("#enfrentamientos").append($("<br></br>"));
 			}
 	    }

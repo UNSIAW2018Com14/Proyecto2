@@ -20,6 +20,9 @@ const bo5Schema = new mongoose.Schema({
     Resultado:{
 		type:String,
 		required:true
+	},
+	comentarios:{
+		type:[String]
 	}
 });
 		

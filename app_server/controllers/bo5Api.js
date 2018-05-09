@@ -17,6 +17,24 @@ const getBo5s = function (req, res) {
 		})
 }
 
+const saveComentarios = function (req, res) {
+	Bo5
+	   .update({idBo5: req.body.Enfrentamiento}, {$push:{comentarios: req.body.Comentario}}, 
+		   {upsert: true, setDefaultsOnInsert: true}, (err, comentario) => {
+			   if (err) { 
+				   res
+					   .status(400)
+					   .json(err);    
+			   } else {
+				   res
+					   .status(201)
+					   .json(comentario);
+			   }
+		   });
+};
+
+
 module.exports = {
-	getBo5s
+	getBo5s,
+	saveComentarios
 };

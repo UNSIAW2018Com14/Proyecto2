@@ -20,6 +20,7 @@ router.post('/equiposFavoritos', middleware, equipoApi.saveEquiposFavoritos);
 router.get('/equiposFavoritos', middleware, equipoApi.getEquiposFavoritos);
 router.post('/integrantesFavoritos', middleware, integranteApi.saveIntegrantesFavoritos);
 router.get('/integrantesFavoritos', middleware, integranteApi.getIntegrantesFavoritos);
+router.post('/comentarios', middleware, bo5Api.saveComentarios);
 
 
 module.exports = router;

@@ -1,4 +1,3 @@
-/* jshint esversion: 6 */
 const passport = require('passport');
 const mongoose = require('mongoose');
 var Strategy = require('passport-facebook').Strategy;
@@ -7,8 +6,9 @@ var User = require('../models/users');
 passport.use(new Strategy({
     clientID: '168126427354074',
     clientSecret: '53335c45156e66fa96d9e650edf7d6c7', 
-    callbackURL: "https://hstournament.herokuapp.com/auth/facebook/callback"
-    //callbackURL: "https://8e33f2df.ngrok.io/auth/facebook/callback"
+    callbackURL: "https://hstournament.herokuapp.com/auth/facebook/callback",
+    //callbackURL: "https://1637a222.ngrok.io/auth/facebook/callback",
+    profileFields: ['id', 'displayName', 'name', 'gender', 'photos']
   },
   function(accessToken, refreshToken, profile, done) {
     //check user table for anyone with a facebook ID of profile.id
@@ -25,7 +25,8 @@ passport.use(new Strategy({
              //   email: profile.emails[0].value,
                 facebookid: profile.id,
                 //now in the future searching on User.findOne({'facebook.id': profile.id } will match because of this next line
-                facebook: profile._json
+                facebook: profile._json,
+                profilePicture: profile.photos[0].value
             });
             user.save(function(err) {
                 if (err) console.log(err);

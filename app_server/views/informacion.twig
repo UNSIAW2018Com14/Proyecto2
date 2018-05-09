@@ -1,24 +1,42 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
+<a href="#" data-id="{{ user.editor }}" id="some-link">{{user}}</a>
 <link href="/stylesheets/estiloInformacion.css" rel="stylesheet">
 <script  type="text/javascript" src="javascripts/muestraInformacion.js" async></script>
-        <div class="informacion">
+<div class="informacion">
         <div class = "titulos"><h1>Información</h1></div>
-        <br>
-        <div class= noticias>
-         <li>Para ver las reglas del juego haga click en el seguiente link:
-          <a class="btn btn-primary" href="https://playhearthstone.com/es-es/game-guide/" role= "button">Reglas</a>
-         </li>
-         <br>
-         <li>Los resultados de la última fecha ya están disponibles</li>  
-         <hr>
-         </div>
-         <br>
-         <div class= "titulos"><h1> Enfrentamientos pasados </h1></div>
-         <br>
-         </div> 
-          <ul id ="enfrentamientos"> 
-        </ul>
-                
+                        <br>
+                        <div class= noticias>
+                                <li>Para ver las reglas del juego haga click en el seguiente link:
+                                <a class="btn btn-primary" href="https://playhearthstone.com/es-es/game-guide/" role= "button">Reglas</a>
+                                </li>
+                        <br>
+                        </div>
+                </div>
+                {% if user.editor %}
+                <div class="informacion">
+                                <h3 class="titulos"> Añadir comentario a partido </h3>
+                                <form method="post" action="/api/comentarios" class= noticias>
+                                        <div class="form-group">
+                                                <label for="Enfrentamiento">Enfrentamiento</label>
+                                                <input type="text" class="form-control" name="Enfrentamiento">
+                                        </div>
+                                        <div class="form-group">
+                                                <label for="Comentario">Comentario:</label>
+                                                <input type="text" class="form-control" name="Comentario">
+                                        </div>
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                </form>
+                                <hr>
+                </div>
+                {% endif %}
+                        <div class="informacion">
+                        <div class= "titulos"><h1> Enfrentamientos pasados </h1></div>
+                        <br>
+                        </div> 
+                        <ul id ="enfrentamientos"> 
+                        </ul>    
+        </div> 
+</div>      
 {% endblock %}
