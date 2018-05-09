@@ -17,7 +17,7 @@ const getBo5s = function (req, res) {
 		})
 }
 
-const saveComentarios = function (req, res) {
+const saveComentarios = function (req, res,next) {
 	Bo5
 	   .update({idBo5: req.body.Enfrentamiento}, {$push:{comentarios: req.body.Comentario}}, 
 		   {upsert: true, setDefaultsOnInsert: true}, (err, comentario) => {
@@ -31,6 +31,7 @@ const saveComentarios = function (req, res) {
 					   .json(comentario);
 			   }
 		   });
+	   next();
 };
 
 
