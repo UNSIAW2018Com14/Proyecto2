@@ -1,0 +1,32 @@
+.leaderboardEquipo{
+     font-size: 20px;
+     padding-top: 5%;
+     padding-left: 5%;
+ }
+ 
+  .leaderboardJugador{
+     font-size: 20px;
+     padding-top: 5%;
+     padding-left: 5%;
+ }
+
+h2{
+    border-left: 6px solid #DEB887;
+    background-color: #FAEBD7;
+
+} 
+.leaderboardEquipo{
+    background-color: #FFF8DC;
+    border: 5px solid grey; 
+    cursor: pointer;  
+}
+
+.leaderboardJugador{
+    background-color: #FFF8DC;
+    border: 5px solid grey;
+    cursor: pointer;
+}
+
+.equipoCSS {
+    background: lightblue;
+}

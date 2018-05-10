@@ -1,0 +1,49 @@
+ .equipoLogo{
+   padding-left: 20%;
+ }
+
+ .integranteFoto{
+   padding-left: 20%;
+}
+
+ .anunciosFoto{
+   width: 200px;
+   height: 100px;
+ }
+ 
+.equipoCSS {
+    background: lightblue;
+}
+
+.logo {
+    width:300px;
+    height:200px;
+}
+
+.informacionParticipantes{
+  padding-top: 100px;
+}
+
+.titulos {
+    border-left: 6px solid #DEB887;
+    background-color: #FAEBD7;
+  }
+
+.tablaInformacion{
+  background-color: #FFF8DC;
+}
+
+body{
+  background-image: url(fondo.jpg)
+}
+
+.muestras{
+    background-color: #FFF8DC; 
+    border-left: 6px solid #DEB887;
+    cursor: pointer;
+}
+
+.muestrasSinClick{
+  background-color: #FFF8DC; 
+  border-left: 6px solid #DEB887;
+}

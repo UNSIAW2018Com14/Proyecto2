@@ -17,21 +17,18 @@ const getBo5s = function (req, res) {
 		})
 }
 
-const saveComentarios = function (req, res,next) {
+const saveComentarios = function (req, res) {
 	Bo5
 	   .update({idBo5: req.body.Enfrentamiento}, {$push:{comentarios: req.body.Comentario}}, 
 		   {upsert: true, setDefaultsOnInsert: true}, (err, comentario) => {
 			   if (err) { 
-				   res
+				   res		   
 					   .status(400)
-					   .json(err);    
+					   .json(err) 
 			   } else {
-				   res
-					   .status(201)
-					   .json(comentario);
+				res.redirect('/informacion');
 			   }
 		   });
-	   next();
 };
 
 

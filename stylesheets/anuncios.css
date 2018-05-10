@@ -1,0 +1,31 @@
+
+.anunciosFoto{
+   float: center;
+   width: 181px;
+   height: 100px;
+ }
+
+ .informacionPagina{
+ 	padding-top: 100px; 
+ }
+ 
+ .card{
+   background-color: #FFF8DC;
+   width: 400px;
+   height: 400px;
+ }
+
+ #container{
+   width:800px;
+   margin:auto;
+   overflow:auto;
+   background: #fff;
+   padding:15px;
+ }
+
+ .body{
+    background: #f4f4f4;
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    color: #666;
+ }

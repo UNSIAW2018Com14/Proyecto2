@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Equipo = mongoose.model('Equipo');
 
-/* GET home page. */
 const index = function (req, res) { 
   res.render('index', {user: req.user});
 };

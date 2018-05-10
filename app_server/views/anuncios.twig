@@ -1,6 +1,7 @@
 {% extends 'layout.twig' %}
 {% block body %}
-<link href="/stylesheets/anuncios.css" rel="stylesheet">    
+<link href="/stylesheets/anuncios.css" rel="stylesheet">
+<script  type="text/javascript" src="javascripts/youtubeApi.js" async></script>
 <div class="informacionPagina">
         <div class="container">
             <div class="row">
@@ -66,13 +67,18 @@
                           <p class="card-text">'Hearthstone' Players Earn Free Packs Starting Today.</p>
                          <a href=https://www.forbes.com/sites/hnewman/2018/03/27/hearthstone-players-earn-free-decks-starting-today/#64e696ec14cf class="btn btn-primary">Visitar</a>
                     </div>
-            </div>
+                </div>
             </div>
         </div>
         <div class = "row">
-            <div class = "col-sm-6">
+            <div id ="container">
+                <h1> Youtube videos </h1>
+                <ul id="results"> </ul>
             </div>
-        </div
-        </div>   
+        </div>
+
+        
+
+</div>   
 {% endblock %}
 

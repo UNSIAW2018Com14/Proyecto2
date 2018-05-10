@@ -1,5 +1,6 @@
 {% extends 'layout.twig' %}
 {% block body %}
+<script  type="text/javascript" src="javascripts/youtube.js" async></script>
 <div id="headerEstilo1" class="container-fluid">
     <div class="row sect">  
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sect">
@@ -14,9 +15,8 @@
         <img class="logoTorneo" src="images/logoTorneo.png" alt="Imagen logo" >
     </div>
     <div class="col-sm-6">
-        <iframe 
-            src= "https://www.youtube.com/embed/Pb_eIQIxVoE" class= "video">
-        </iframe>
+        <div id="player"></div>
+      
     </div>
 </div>
 <hr>        

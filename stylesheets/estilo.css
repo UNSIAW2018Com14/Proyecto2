@@ -1,0 +1,119 @@
+
+.titulo {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+    font-family: armWrestler;
+    padding-top: 54px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    float:left;
+}
+
+.lema {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.imagenPortada {
+    width: 100%;
+    height: 100%;
+}
+
+.textoFecha{
+    font-size: 20px;
+    float: center;
+    padding-top: 20%;
+    padding-left: 20%;
+}
+
+.video{
+    width: 100%;
+    height: 415px;
+ }
+
+ .descripcion{
+    font-size: 20px;
+    float: center;
+ }
+ 
+.descripcion{
+    padding-left: 20px;
+    float: left;
+}
+
+p{
+    padding-left: 15px;
+    float: left;
+    font-size: 20px;
+    float: left;
+    color: black;
+    border-left: 30px solid grey;
+    border-right: 30px solid grey;
+    background-color: white;
+}
+
+.logoTorneo{
+    width: 415px;
+    height: 415px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnEstilo{
+    padding-top: 15px;
+}
+.fondoColor{
+    background-color: #FFF8DC;
+}
+
+.menu{
+    background-color: #FFF8DC;
+}
+
+a{  
+    background-color: #FFF8DC;
+    background-clip: content-box #DEB887, padding-box #DEB887;
+    background-color: #DEB887;
+}
+
+.navbar-default .navbar-nav>li>a {
+    background-color: #FFF8DC;
+    color: white;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #DEB887;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 0px 20px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    padding-top:22px;
+     vertical-align: center;
+    text-align: center;
+    color: grey;
+    background-color: #DEB887;
+    border-color: #FFF8DC;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    background-color: #FFF8DC;
+}
+button{
+    padding-top: 3px;
+    background-color: #2E579E;
+     background-clip: content-box #FFF8DC, padding-box #FFF8DC, padding black;
+
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #5d4c4cde;
+    background-color: #DEB887;
+    border-color: #DEB887;
+}
