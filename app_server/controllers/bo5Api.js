@@ -20,7 +20,7 @@ const getBo5s = function (req, res) {
 const saveComentarios = function (req, res) {
 	Bo5
 	   .update({idBo5: req.body.Enfrentamiento}, {$push:{comentarios: req.body.Comentario}}, 
-		   {upsert: true, setDefaultsOnInsert: true}, (err, comentario) => {
+		   {upsert: false}, (err, comentario) => {
 			   if (err) { 
 				   res		   
 					   .status(400)

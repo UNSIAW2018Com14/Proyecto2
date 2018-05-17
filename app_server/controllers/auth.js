@@ -6,8 +6,8 @@ var User = require('../models/users');
 passport.use(new Strategy({
     clientID: '168126427354074',
     clientSecret: '53335c45156e66fa96d9e650edf7d6c7', 
+    //callbackURL: "https://3aa1420e.ngrok.io/auth/facebook/callback",
     callbackURL: "https://hstournament.herokuapp.com/auth/facebook/callback",
-    //callbackURL: "https://40b4b618.ngrok.io/auth/facebook/callback",
     profileFields: ['id', 'displayName', 'name', 'gender', 'photos']
   },
   function(accessToken, refreshToken, profile, done) {
